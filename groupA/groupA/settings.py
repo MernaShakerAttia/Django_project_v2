@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'groupA.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME':'geeksdb',
 	'USER':'root',
-	'PASSWORD':'root',
+	'PASSWORD':'123',
         
     }
 }
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/cairo'
+TIME_ZONE = 'Africa/Cairo'
 
 USE_I18N = True
 
