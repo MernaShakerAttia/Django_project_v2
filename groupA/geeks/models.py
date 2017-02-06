@@ -28,8 +28,9 @@ class Post(models.Model):
 		return '%s %s %s '%(self.title, self.post_category, self.category)
 class Admin(models.Model):
 	pass
+"""for test"""
 
-	
+		
 
 
 		
