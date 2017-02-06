@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<html>
+<head>
+	<title></title>
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+</head>
+<body>
+{% include 'opensource/header.html' %}
+{% block main_block %}
+
+{% endblock %}
+{% include 'opensource/footer.html' %}
+</body>
+</html>

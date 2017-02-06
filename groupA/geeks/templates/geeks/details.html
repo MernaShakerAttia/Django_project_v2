@@ -1,0 +1,16 @@
+{%  extends 'opensource/base.html' %}
+
+
+{% block main_block %}
+<title>Question details</title>
+
+
+<h1>{{quest.q_text}}</h1>
+<ul>
+{% for choice in allChoices %}
+  	<li><p>{{choice.c_text}}</p></li>
+{% endfor %}
+<a href="/opensource/allquestions">Home</a>
+</ul>
+
+{% endblock %}

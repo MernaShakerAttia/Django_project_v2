@@ -1,0 +1,22 @@
+{%  extends 'opensource/base.html' %}
+
+
+{% block main_block %}
+
+<table border ='1'>
+<th>Question</th> <th>Date Published</th><th colspan="4">Action</th>
+
+{%  for qt in all_questions %}
+<tr>
+	<td>{{qt.q_text}}</td>
+	<td>{{qt.q_date}}</td>
+	<td><a href="questions/{{qt.id}}/details">details</a></td>
+	<td><a href="questions/{{qt.id}}/edit">change</a></td>
+	<td><a href="questions/{{qt.id}}/delete">delete</a></td>
+</tr>
+{%  endfor  %}
+<button type="submit"><a href="questions/new">New Question</a></button>
+
+</table>
+
+{% endblock %}

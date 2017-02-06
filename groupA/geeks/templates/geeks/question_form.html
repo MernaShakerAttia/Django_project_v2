@@ -1,0 +1,13 @@
+{%  extends 'opensource/base.html' %}
+
+
+{% block main_block %}
+
+
+<form method='POST'> {% csrf_token%}
+{{quest_form.as_p}}
+
+<button type="submit">Save</button>
+</form>
+
+{% endblock %}
