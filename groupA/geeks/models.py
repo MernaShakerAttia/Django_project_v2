@@ -21,7 +21,7 @@ class Post(models.Model):
 	contant=models.TextField()
 	post_category=models.ForeignKey(category,on_delete=models.CASCADE)
 	post_time=models.DateTimeField('datetime')
-	post_image = models.ImageField(upload_to = 'imgs/',default='No_image_available.svg')
+	post_image = models.ImageField(upload_to = 'geeks/static/imgs/',default='No_image_available.svg')
 	def __str__(self):
 		return '%s %s'%(self.title, self.post_category)
 

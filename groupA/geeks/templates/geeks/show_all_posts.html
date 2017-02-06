@@ -1,16 +1,16 @@
 {%  extends 'geeks/base.html' %}
 {% block main_block %}
 
-<table border ='1'>
-<th>Post title</th>
+<h1>Post list</h1>
 
 {%  for post in all_posts %}
-<tr>
-  <td>{{post.title}}</td>
-	<td><a href="posts/{{post.id}}/details">Show Post</a></td>
+<div>
+  <img src="{{post.post_image}}"/>
+  <h1>{{post.title}}</h1>
+	<button><a href="posts/{{post.id}}/details">Show Post</a></button>
 </tr>
 {%  endfor  %}
 
-</table>
+</div>
 
 {% endblock %}
