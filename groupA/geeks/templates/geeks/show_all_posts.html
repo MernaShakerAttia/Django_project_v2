@@ -1,0 +1,16 @@
+{%  extends 'geeks/base.html' %}
+{% block main_block %}
+
+<table border ='1'>
+<th>Post title</th>
+
+{%  for post in all_posts %}
+<tr>
+  <td>{{post.title}}</td>
+	<td><a href="posts/{{post.id}}/details">Show Post</a></td>
+</tr>
+{%  endfor  %}
+
+</table>
+
+{% endblock %}
