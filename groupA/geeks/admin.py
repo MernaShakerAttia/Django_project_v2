@@ -5,5 +5,4 @@ from .models import category, forbidden,Post,Comment
 admin.site.register(Post)
 admin.site.register(Comment)
 admin.site.register(category)
-# admin.site.register(user)
 admin.site.register(forbidden)

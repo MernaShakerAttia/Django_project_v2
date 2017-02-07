@@ -6,6 +6,7 @@ from django.http import HttpResponse ,HttpResponseRedirect
 
 def show_all_categorys(request):
 	all_cat = category.objects.all()
+	print(all_cat)
 	context = {'all_categorys': all_cat}
 	return render(request, 'geeks/index.html' ,context)
 

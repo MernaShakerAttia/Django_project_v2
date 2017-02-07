@@ -77,10 +77,11 @@ WSGI_APPLICATION = 'groupA.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'geeksdb',
+        'NAME': 'geeksdb',
         'USER':'root',
         'PASSWORD':'root',
-
+        'HOST':'127.0.0.1',
+        'PORT':'3306'
     }
 }
 
