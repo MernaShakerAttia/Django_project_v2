@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'geeksdb',
         'USER':'root',
-        'PASSWORD':'root',
+        'PASSWORD':'123',
 
     }
 }
