@@ -4,13 +4,14 @@
 <h1>Post list</h1>
 
 {%  for post in all_posts %}
-<div>
-  <img src="{{post.post_image}}"/>
-  <h1>{{post.title}}</h1>
-	<button><a href="posts/{{post.id}}/details">Show Post</a></button>
-</tr>
-{%  endfor  %}
 
+<div style="border:1px solid black;margin-top: 50px;width: 500px;margin-right: auto; margin-left: auto;">
+  <img src="/../../static/{{post.post_image}}"/>
+  <h1>{{post.title}}</h1>
+  <h4>Date : {{post.post_time}}</h4>
+	<button><a href="posts/{{post.id}}/details">Show Post</a></button>
+  <p></p>
 </div>
 
+{%  endfor  %}
 {% endblock %}
