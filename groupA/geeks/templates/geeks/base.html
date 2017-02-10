@@ -1,16 +1,23 @@
-{% load staticfiles %}
-
 <html>
-<head>
-	<title></title>
+	<head> </head>
+	<body>
 
-<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
-</head>
-<body>
-{% include 'geeks/header.html' %}
-{% block main_block %}
+         		{% if not request.user.is_authenticated %}
 
-{% endblock %}
-{% include 'geeks/footer.html' %}
-</body>
+		<li><a href='/admin'>login</a></li>
+		<li><a href='/registration'>Register</a></li>
+
+		{% else %}
+
+		{% if request.user.is_superuser %}
+		<li><a href='/geeks/adminhome/'>Manage_blog</a></li>
+		<li><a href='/accounts/logout'>logout</a></li>
+    {% else %}
+     <li><a href='/accounts/logout'>logout</a></li>
+
+    {% endif %}
+		{% endif %}
+		{% block main_block %}
+		{% endblock %}
+	</body>
 </html>
